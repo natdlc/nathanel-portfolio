@@ -4,6 +4,7 @@ import Socials from "@/components/nav/socials/socials";
 import Skills from "@/components/nav/skills/skills";
 import Hero from "@/components/sections/hero/hero";
 import About from "@/components/sections/about/about";
+import Work from "@/components/sections/work/work";
 
 export default function Home() {
   return (
@@ -30,39 +31,7 @@ export default function Home() {
         <About />
 
         {/* work */}
-        <section id="work">
-          {/* sheenafaye.com */}
-          <article>
-            <div>
-              <h2>sheenafaye.com</h2>
-              <h4>in progress</h4>
-            </div>
-            <figure>
-              <img src="https://via.placeholder.com/1920x1080" width={500} />
-              <figcaption>
-                A website for my partner who needed to reach high paying clients
-                through an elegant portfolio that showcases her profession and
-                personality
-              </figcaption>
-            </figure>
-          </article>
-
-          {/* labloco.com */}
-          <article>
-            <div>
-              <h2>labloco.com</h2>
-              <h4>in progress</h4>
-            </div>
-            <figure>
-              <img src="https://via.placeholder.com/1920x1080" width={500} />
-              <figcaption>
-                An e-commerce website owned by passionate medical entrepreneurs
-                who needed to increase engagement, visibility, and revenue
-                through intuitive user experience
-              </figcaption>
-            </figure>
-          </article>
-        </section>
+        <Work />
 
         {/* contact */}
         <section id="contact">
