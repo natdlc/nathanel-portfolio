@@ -65,7 +65,101 @@ export default function Home() {
           </p>
           <button>Contact me</button>
         </section>
+
+        {/* about */}
+        <section>
+          {/* who i am */}
+          <div>
+            <h3>Who I am</h3>
+            <p>
+              I have been designing and developing websites since 2021. I am 27
+              years old, based in the Philippines, and my Myers-Briggs
+              personality type is INFJ-T.
+            </p>
+          </div>
+
+          {/* what i do */}
+          <div>
+            <h3>What I do</h3>
+            <p>
+              I help business owners and professionals create better branding,
+              solidify credibility, and increase traffic and revenue by creating
+              well-designed and functional websites with practically structured
+              code.
+            </p>
+          </div>
+
+          {/* How I do it */}
+          <div>
+            <h3>How I do it</h3>
+            <p>
+              We'll talk, plan, repeat until we're both clear on every process,
+              then I'll start coding the website. We'll stay in touch for
+              feedback, then we'll talk again about before we publish the
+              website.
+            </p>
+          </div>
+
+          {/* Life outside code */}
+          <div>
+            <h3>Life outside code</h3>
+            <p>
+              I have 8 cats and 1 dog. I take care of them everyday. I love
+              listening to many kinds of music like hip-hop, rap, dubstep,
+              classical, alternative rock, grunge, pop punk, screamo. I play PC
+              and PS games. I enjoy coffee in the morning. I listen to podcasts
+              while doing house chores. I like to talk about theories, humanity,
+              and the universe.
+            </p>
+          </div>
+        </section>
+
+        {/* projects */}
+        <section>
+          {/* sheenafaye.com */}
+          <article>
+            <div>
+              <h2>sheenafaye.com</h2>
+              <p>in progress</p>
+            </div>
+            <figure>
+              <img src="https://via.placeholder.com/1920x1080" width={500} />
+              <figcaption>
+                A website for my partner who needed to reach high paying clients
+                through an elegant portfolio that showcases her profession and
+                personality
+              </figcaption>
+            </figure>
+          </article>
+
+          {/* labloco.com */}
+          <article>
+            <div>
+              <h2>labloco.com</h2>
+              <p>in progress</p>
+            </div>
+            <figure>
+              <img src="https://via.placeholder.com/1920x1080" width={500} />
+              <figcaption>
+                An e-commerce website owned by passionate medical entrepreneurs
+                who needed to increase engagement, visibility, and revenue
+                through intuitive user experience
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+
+        {/* contact */}
+        <section>
+          <h3>let's chat</h3>
+          <p>nathanelwebdesign@gmail.com</p>
+        </section>
       </main>
+      <footer>
+        <p>
+          <small>nathanel.dev &copy; 2023</small>
+        </p>
+      </footer>
     </>
   );
 }
