@@ -1,9 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import twitterIcon from "@/public/socials-icon/twitter.png";
-import linkedinIcon from "@/public/socials-icon/linkedin.png";
-import skillsIcon from "@/public/skills-icon.svg";
+import Header from "@/components/nav/header/header";
+import Socials from "@/components/nav/socials/socials";
+import Skills from "@/components/nav/skills/skills";
 
 export default function Home() {
   return (
@@ -17,42 +15,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* fixed section start*/}
-      <header>
-        <p>nathanel.dev</p>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="#about">About</Link>
-            </li>
-            <li>
-              <Link href="#work">Work</Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link href="#contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <aside>
-        <a href="https://twitter.com/nathanelcorpuz" target="_blank">
-          <Image src={twitterIcon} width={30} />
-        </a>
-        <a href="https://linkedin.com/in/nathanelcorpuz/" target="_blank">
-          <Image src={linkedinIcon} width={30} />
-        </a>
-      </aside>
-      <aside>
-        <Link href="skills">
-          <Image src={skillsIcon} width={50} />
-        </Link>
-      </aside>
+      {/* fixed */}
+      <Header />
+      <Socials />
+      <Skills />
 
       <main>
         {/* hero */}
@@ -67,7 +33,7 @@ export default function Home() {
         </section>
 
         {/* about */}
-        <section>
+        <section id="about">
           {/* who i am */}
           <div>
             <h3>Who I am</h3>
@@ -114,13 +80,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* projects */}
-        <section>
+        {/* work */}
+        <section id="work">
           {/* sheenafaye.com */}
           <article>
             <div>
               <h2>sheenafaye.com</h2>
-              <p>in progress</p>
+              <h4>in progress</h4>
             </div>
             <figure>
               <img src="https://via.placeholder.com/1920x1080" width={500} />
@@ -136,7 +102,7 @@ export default function Home() {
           <article>
             <div>
               <h2>labloco.com</h2>
-              <p>in progress</p>
+              <h4>in progress</h4>
             </div>
             <figure>
               <img src="https://via.placeholder.com/1920x1080" width={500} />
@@ -150,11 +116,12 @@ export default function Home() {
         </section>
 
         {/* contact */}
-        <section>
-          <h3>let's chat</h3>
+        <section id="contact">
+          <h2>let's chat</h2>
           <p>nathanelwebdesign@gmail.com</p>
         </section>
       </main>
+
       <footer>
         <p>
           <small>nathanel.dev &copy; 2023</small>

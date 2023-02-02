@@ -1,0 +1,23 @@
+.header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.ul {
+  display: flex;
+  gap: 20px;
+}
+
+.blog {
+  padding: 10px 20px;
+  display: inline-block;
+}
