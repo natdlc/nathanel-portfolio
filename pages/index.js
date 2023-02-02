@@ -26,16 +26,9 @@ export default function Home() {
       <Skills />
 
       <main>
-        {/* hero */}
         <Hero />
-
-        {/* about */}
         <About />
-
-        {/* work */}
         <Work />
-
-        {/* contact */}
         <Contact />
       </main>
 

@@ -7,3 +7,34 @@
   flex-direction: column;
   gap: 30px;
 }
+
+.section a {
+  position: relative;
+  display: flex;
+  transition: all 0.3s;
+}
+
+.section a:hover {
+  background: black;
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.section a::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  width: 50%;
+  background-color: black;
+  height: 1px;
+  right: 65px;
+  transition: all 0.3s;
+}
+
+.section a:hover::after {
+  bottom: -25px;
+  width: 100%;
+  right: 0;
+  height: 5px;
+}

@@ -9,10 +9,10 @@ export default function Socials() {
   return (
     <aside className={styles.aside}>
       <Anchor href="https://twitter.com/nathanelcorpuz" target="_blank">
-        <Image src={twitterIcon} width={30} />
+        <Image src={twitterIcon} width={20} />
       </Anchor>
       <Anchor href="https://linkedin.com/in/nathanelcorpuz/" target="_blank">
-        <Image src={linkedinIcon} width={30} />
+        <Image src={linkedinIcon} width={20} />
       </Anchor>
     </aside>
   );

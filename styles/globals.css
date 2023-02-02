@@ -7,6 +7,10 @@
   font-family: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
 }
@@ -22,6 +26,14 @@ button {
   cursor: pointer;
   display: flex;
   font-weight: normal;
+  border: 1px solid black;
+  transition: all 0.3s;
+}
+
+button:hover {
+  border: 1px solid black;
+  color: black;
+  background: white;
 }
 
 a {
@@ -77,8 +89,5 @@ h4 {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: white;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
+  background: rgb(33, 33, 33);
 }
