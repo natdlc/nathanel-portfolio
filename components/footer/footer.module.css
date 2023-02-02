@@ -1,0 +1,10 @@
+.footer {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.footer p small {
+    opacity: 50%;
+    letter-spacing: 3px;
+}

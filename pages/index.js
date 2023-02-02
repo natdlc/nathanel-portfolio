@@ -5,6 +5,8 @@ import Skills from "@/components/nav/skills/skills";
 import Hero from "@/components/sections/hero/hero";
 import About from "@/components/sections/about/about";
 import Work from "@/components/sections/work/work";
+import Contact from "@/components/sections/contact/contact";
+import Footer from "@/components/footer/footer";
 
 export default function Home() {
   return (
@@ -34,17 +36,10 @@ export default function Home() {
         <Work />
 
         {/* contact */}
-        <section id="contact">
-          <h2>let's chat</h2>
-          <p>nathanelwebdesign@gmail.com</p>
-        </section>
+        <Contact />
       </main>
 
-      <footer>
-        <p>
-          <small>nathanel.dev &copy; 2023</small>
-        </p>
-      </footer>
+      <Footer />
     </>
   );
 }
