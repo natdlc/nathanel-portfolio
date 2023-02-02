@@ -27,10 +27,6 @@
 
 }
 
-.section h3 {
-    font-size: 100px;
-}
-
 .section > p {
     max-width: 800px;
     text-align: center;
@@ -39,7 +35,7 @@
 .list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 35px;
     width: 400px;
     padding-top: 20px;
 }

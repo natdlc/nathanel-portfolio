@@ -9,7 +9,7 @@ export default function Hero() {
       </article>
       <p>
         I design and develop websites for entrepreneurs, businesses, and
-        professionals
+        professionals.
       </p>
       <button className={styles.cta}>Contact me</button>
     </section>

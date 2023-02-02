@@ -12,7 +12,7 @@ export default function WorkItem({ item }) {
         <a href={item.url} target="_blank">
           <img
             src="https://via.placeholder.com/1920x1080"
-            width={500}
+            width={800}
             alt="placeholder image"
           />
         </a>
