@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "@/components/nav/header/header";
 import Socials from "@/components/nav/socials/socials";
 import Skills from "@/components/nav/skills/skills";
+import Hero from "@/components/sections/hero/hero";
 
 export default function Home() {
   return (
@@ -22,15 +23,7 @@ export default function Home() {
 
       <main>
         {/* hero */}
-        <section>
-          <p>Hi, I'm</p>
-          <h1>Nathanel</h1>
-          <p>
-            I design and develop websites for entrepreneurs, businesses, and
-            professionals
-          </p>
-          <button>Contact me</button>
-        </section>
+        <Hero />
 
         {/* about */}
         <section id="about">
