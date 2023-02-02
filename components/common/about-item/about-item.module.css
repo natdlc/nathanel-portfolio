@@ -1,0 +1,12 @@
+.article {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+.description {
+  max-width: 500px;
+  text-align: center;
+}

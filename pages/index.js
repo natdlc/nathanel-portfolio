@@ -3,6 +3,7 @@ import Header from "@/components/nav/header/header";
 import Socials from "@/components/nav/socials/socials";
 import Skills from "@/components/nav/skills/skills";
 import Hero from "@/components/sections/hero/hero";
+import About from "@/components/sections/about/about";
 
 export default function Home() {
   return (
@@ -26,52 +27,7 @@ export default function Home() {
         <Hero />
 
         {/* about */}
-        <section id="about">
-          {/* who i am */}
-          <div>
-            <h3>Who I am</h3>
-            <p>
-              I have been designing and developing websites since 2021. I am 27
-              years old, based in the Philippines, and my Myers-Briggs
-              personality type is INFJ-T.
-            </p>
-          </div>
-
-          {/* what i do */}
-          <div>
-            <h3>What I do</h3>
-            <p>
-              I help business owners and professionals create better branding,
-              solidify credibility, and increase traffic and revenue by creating
-              well-designed and functional websites with practically structured
-              code.
-            </p>
-          </div>
-
-          {/* How I do it */}
-          <div>
-            <h3>How I do it</h3>
-            <p>
-              We'll talk, plan, repeat until we're both clear on every process,
-              then I'll start coding the website. We'll stay in touch for
-              feedback, then we'll talk again about before we publish the
-              website.
-            </p>
-          </div>
-
-          {/* Life outside code */}
-          <div>
-            <h3>Life outside code</h3>
-            <p>
-              I have 8 cats and 1 dog. I take care of them everyday. I love
-              listening to many kinds of music like hip-hop, rap, dubstep,
-              classical, alternative rock, grunge, pop punk, screamo. I play PC
-              and PS games. I enjoy coffee in the morning. I listen to podcasts
-              while doing house chores. I like to talk about theories, humanity,
-              and the universe.
-            </p>
-          </div>
-        </section>
+        <About />
 
         {/* work */}
         <section id="work">
