@@ -75,11 +75,12 @@ h4 {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
+  background: rgb(235, 235, 235);
 }
 
 /* Handle */

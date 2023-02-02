@@ -7,7 +7,7 @@ export default function Work() {
   return (
     <section id="work">
       {items.map((item) => (
-        <WorkItem key={item.key} item={item} />
+        <WorkItem key={item.id} item={item} />
       ))}
     </section>
   );

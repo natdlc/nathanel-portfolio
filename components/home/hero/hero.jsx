@@ -11,7 +11,9 @@ export default function Hero() {
         I design and develop websites for entrepreneurs, businesses, and
         professionals.
       </p>
-      <button className={styles.cta}>Contact me</button>
+      <a href="#contact">
+        <button className={styles.cta}>Contact me</button>
+      </a>
     </section>
   );
 }
