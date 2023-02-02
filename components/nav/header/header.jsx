@@ -1,21 +1,26 @@
 import styles from "./header.module.css";
 import Anchor from "@/components/common/anchor/anchor";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header() {
+  const router = useRouter();
+
+  const isNotHome = router.pathname !== "/";
+
   return (
     <header className={styles.header}>
       <p className={styles.logo}>nathanel.dev</p>
       <nav>
         <ul className={styles.ul}>
           <li>
-            <Anchor href="#">Home</Anchor>
+            <Anchor href={isNotHome ? "/" : "#"}>Home</Anchor>
           </li>
           <li>
-            <Anchor href="#about">About</Anchor>
+            <Anchor href={isNotHome ? "/#about" : "#about"}>About</Anchor>
           </li>
           <li>
-            <Anchor href="#work">Work</Anchor>
+            <Anchor href={isNotHome ? "/#work" : "#work"}>Work</Anchor>
           </li>
           <li>
             <Link href="blog" className={styles.blog}>
@@ -23,7 +28,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Anchor href="#contact">Contact</Anchor>
+            <Anchor href={isNotHome ? "/#contact" : "#contact"}>Contact</Anchor>
           </li>
         </ul>
       </nav>

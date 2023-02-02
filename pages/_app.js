@@ -1,3 +1,4 @@
+import Layout from "@/components/layout";
 import "@/styles/globals.css";
 import { Montserrat } from "@next/font/google";
 
@@ -13,7 +14,9 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

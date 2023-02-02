@@ -1,4 +1,4 @@
-import AboutItem from "@/components/sections/about/about-item/about-item";
+import AboutItem from "./about-item/about-item";
 import { getAboutArticles } from "@/lib/about";
 
 const articles = getAboutArticles();

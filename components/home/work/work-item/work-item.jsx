@@ -10,7 +10,11 @@ export default function WorkItem({ item }) {
       <figure className={styles.figure}>
         {/* change this to next/image component once project is complete*/}
         <a href={item.url} target="_blank">
-          <img src="https://via.placeholder.com/1920x1080" width={500} />
+          <img
+            src="https://via.placeholder.com/1920x1080"
+            width={500}
+            alt="placeholder image"
+          />
         </a>
         <figcaption>{item.caption}</figcaption>
       </figure>
