@@ -66,7 +66,7 @@
   height: 1px;
   background: black;
   animation-name: socials-line;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
 }
 
 .aside a:hover img {

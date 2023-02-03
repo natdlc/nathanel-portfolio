@@ -7,9 +7,7 @@
   font-family: inherit;
 }
 
-*::selection,
-*::after::selection,
-*::before::selection {
+*::selection {
   color: white;
   background-color: black;
 }

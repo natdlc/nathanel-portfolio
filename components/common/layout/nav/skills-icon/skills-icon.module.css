@@ -39,7 +39,7 @@
   transform: rotate(45deg) scale(1);
   transition: all 0.3s;
   animation-name: skills-icon;
-  animation-duration: 5s;
+  animation-duration: 4s;
 }
 
 .rotated {
