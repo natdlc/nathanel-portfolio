@@ -1,0 +1,62 @@
+.list_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.list_key {
+  text-transform: uppercase;
+}
+
+.list_line {
+  flex-grow: 1;
+  height: 1px;
+  background: black;
+  margin: 0 20px;
+}
+
+/* list_key animation */
+
+.hiddenListKey {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+.shownListKey {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1.5s;
+}
+
+/* list_line animation */
+
+.hiddenListLine {
+  opacity: 0;
+  filter: blur(5px);
+  transform: scale(0.1);
+  transition: all 1.5s;
+}
+.shownListLine {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+  transition: all 1.5s;
+}
+
+/* list_value animation */
+
+.hiddenListValue {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1.5s;
+}
+.shownListValue {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1.5s;
+}

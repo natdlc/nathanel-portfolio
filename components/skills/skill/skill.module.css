@@ -1,0 +1,50 @@
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 120px;
+}
+
+.section > p {
+  max-width: 800px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 400px;
+  padding-top: 20px;
+}
+
+/* title animation */
+.hiddenTitle {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 1s;
+}
+.shownTitle {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 1s;
+}
+
+/* description animation */
+.hiddenDescription {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 1.2s;
+}
+.shownDescription {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 1.2s;
+}

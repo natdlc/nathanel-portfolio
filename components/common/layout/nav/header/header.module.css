@@ -26,11 +26,7 @@
     transform: translateX(-100%);
     filter: blur(10px);
   }
-  20% {
-    opacity: 0;
-    transform: translateX(-100%);
-    filter: blur(10px);
-  }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -57,7 +53,7 @@
   align-items: center;
   padding: 10px 20px;
   animation-name: nav-logo;
-  animation-duration: 3s;
+  animation-duration: 1s;
 }
 
 .ul {
