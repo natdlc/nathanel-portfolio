@@ -2,9 +2,12 @@ import styles from "./header.module.css";
 import Anchor from "@/components/common/anchor/anchor";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import AboutSubmenu from "./about-submenu/about-submenu";
 
 export default function Header() {
   const router = useRouter();
+  const [isHovered, setIsHovered] = useState();
 
   const isNotHome = router.pathname !== "/";
 
@@ -16,8 +19,13 @@ export default function Header() {
           <li>
             <Anchor href={isNotHome ? "/" : "#"}>Home</Anchor>
           </li>
-          <li>
+          <li
+            onPointerEnter={() => setIsHovered(true)}
+            onPointerLeave={() => setIsHovered(false)}
+            className={styles.about}
+          >
             <Anchor href={isNotHome ? "/#about" : "#about"}>About</Anchor>
+            {isHovered ? <AboutSubmenu /> : null}
           </li>
           <li>
             <Anchor href={isNotHome ? "/#work" : "#work"}>Work</Anchor>
