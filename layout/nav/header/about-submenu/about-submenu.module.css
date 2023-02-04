@@ -13,9 +13,8 @@
   flex-direction: column;
   align-items: center;
   width: 300px;
-  bottom: -155px;
+  bottom: -210px;
   padding-top: 20px;
-  gap: 20px;
   /*  */
   /* border: 1px solid red; */
 }
@@ -28,8 +27,9 @@
 }
 
 .menu > li > a {
+  display: block;
   letter-spacing: 1px;
-  padding: 5px;
+  padding: 15px 5px;
   transition: all 0.5s;
 }
 
