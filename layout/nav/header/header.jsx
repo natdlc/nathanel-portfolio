@@ -1,15 +1,27 @@
 import styles from "./header.module.css";
 import Anchor from "@/components/common/anchor/anchor";
 import Link from "next/link";
+import { getAboutArticles } from "@/lib/about";
+import useSubmenu from "@/hooks/useSubmenu";
+import { getWorkItems } from "@/lib/work";
+import Submenu from "@/components/common/submenu/submenu";
 import { useRouter } from "next/router";
-import { useState } from "react";
-import AboutSubmenu from "./about-submenu/about-submenu";
 
 export default function Header() {
   const router = useRouter();
-  const [isHovered, setIsHovered] = useState();
-
   const isNotHome = router.pathname !== "/";
+
+  const aboutSubmenu = useSubmenu({
+    path: "about",
+    title: "About",
+    items: getAboutArticles(),
+  });
+
+  const workSubmenu = useSubmenu({
+    path: "work",
+    title: "Work",
+    items: getWorkItems(),
+  });
 
   return (
     <header className={styles.header}>
@@ -19,17 +31,8 @@ export default function Header() {
           <li>
             <Anchor href={isNotHome ? "/" : "#"}>Home</Anchor>
           </li>
-          <li
-            onPointerEnter={() => setIsHovered(true)}
-            onPointerLeave={() => setIsHovered(false)}
-            className={styles.about}
-          >
-            <Anchor href={isNotHome ? "/#about" : "#about"}>About</Anchor>
-            {isHovered ? <AboutSubmenu /> : null}
-          </li>
-          <li>
-            <Anchor href={isNotHome ? "/#work" : "#work"}>Work</Anchor>
-          </li>
+          <Submenu submenu={aboutSubmenu} />
+          <Submenu submenu={workSubmenu} />
           <li>
             <Link href="blog" className={styles.blog}>
               Blog
