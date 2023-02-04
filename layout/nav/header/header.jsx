@@ -29,12 +29,15 @@ export default function Header() {
       <nav>
         <ul className={styles.ul}>
           <li>
-            <Anchor href={isNotHome ? "/" : "#"}>Home</Anchor>
+            {/* <Anchor href={isNotHome ? "/" : "#"}>Home</Anchor> */}
+            <Link href="/" className={styles.link}>
+              Home
+            </Link>
           </li>
           <Submenu submenu={aboutSubmenu} />
           <Submenu submenu={workSubmenu} />
           <li>
-            <Link href="blog" className={styles.blog}>
+            <Link href="blog" className={styles.link}>
               Blog
             </Link>
           </li>

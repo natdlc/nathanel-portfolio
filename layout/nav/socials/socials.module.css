@@ -6,11 +6,6 @@
     transform: translateX(-100%);
     filter: blur(5px);
   }
-  80% {
-    opacity: 0;
-    transform: translateX(-100%);
-    filter: blur(5px);
-  }
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -20,10 +15,6 @@
 
 @keyframes socials-line {
   0% {
-    width: 0;
-  }
-
-  80% {
     width: 0;
   }
 
@@ -49,7 +40,7 @@
   /* transform: scale(1); */
   transition: all 0.3s;
   animation-name: socials-icon;
-  animation-duration: 4s;
+  animation-duration: 1s;
 }
 
 .aside a {
@@ -66,7 +57,7 @@
   height: 1px;
   background: black;
   animation-name: socials-line;
-  animation-duration: 2.5s;
+  animation-duration: 1s;
 }
 
 .aside a:hover img {

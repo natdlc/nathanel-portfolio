@@ -1,0 +1,17 @@
+.skills_icon_cover {
+  position: fixed;
+  width: 100px;
+  height: 300px;
+  background: white;
+  bottom: 130px;
+  z-index: 101;
+  right: 0;
+}
+
+.shown {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
