@@ -1,19 +1,18 @@
 @keyframes cta-initial-delay {
   0% {
     opacity: 0;
-    filter: blur(12px);
+    filter: blur(5px);
     transform: translateY(200%);
   }
-  80% {
+  37% {
     opacity: 0;
-    filter: blur(12px);
+    filter: blur(5px);
     transform: translateY(200%);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
-    transition: all 2s;
   }
 }
 
@@ -36,7 +35,7 @@
 .cta {
   margin-top: 20px;
   animation-name: cta-initial-delay;
-  animation-duration: 6s;
+  animation-duration: 3s;
 }
 
 /* greet animation */
@@ -82,12 +81,12 @@
 /* cta animation */
 .hideCTA {
   opacity: 0;
-  filter: blur(12px);
+  filter: blur(5px);
   transform: translateY(200%);
 }
 .showCTA {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
-  transition: all 2s;
+  transition: all 1s;
 }

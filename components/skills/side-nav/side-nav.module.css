@@ -1,12 +1,22 @@
 /* <a> animations */
 
 @keyframes slide-right {
-  from {
+  0% {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%) rotate(0deg);
   }
-  to {
+  50% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-1000%) rotate(0deg);
+  }
+  75% {
+    opacity: 0.7;
+    filter: blur(0);
+    transform: translateX(100%) rotate(45deg);
+  }
+  100% {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0) rotate(45deg);
@@ -27,8 +37,8 @@
 
 .div a {
   transform: rotate(45deg);
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   border: 1px solid black;
   display: block;
 }
@@ -43,19 +53,19 @@
 }
 
 .div a:nth-child(1) {
-  animation-duration: 0.5s;
+  animation-duration: 1.7s;
 }
 .div a:nth-child(2) {
-  animation-duration: 0.7s;
+  animation-duration: 1.8s;
 }
 .div a:nth-child(3) {
-  animation-duration: 0.9s;
+  animation-duration: 1.9s;
 }
 .div a:nth-child(4) {
-  animation-duration: 1.2s;
+  animation-duration: 2s;
 }
 .div a:nth-child(5) {
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 
 .visible {
