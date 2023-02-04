@@ -5,7 +5,7 @@ export default function WorkItem({ item }) {
   const toggler = (inView) => (inView ? styles.shown : styles.hidden);
 
   return (
-    <article className={styles.article}>
+    <article id={item.id} className={styles.article}>
       <header className={styles.header}>
         <InView>
           {({ inView, ref }) => (
