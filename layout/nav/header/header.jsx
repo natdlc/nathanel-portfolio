@@ -1,11 +1,11 @@
+import { useRouter } from "next/router";
+import Link from "next/link";
 import styles from "./header.module.css";
 import Anchor from "@/components/common/anchor/anchor";
-import Link from "next/link";
-import { getAboutArticles } from "@/lib/about";
-import useSubmenu from "@/hooks/useSubmenu";
-import { getWorkItems } from "@/lib/work";
 import Submenu from "@/components/common/submenu/submenu";
-import { useRouter } from "next/router";
+import useSubmenu from "@/hooks/useSubmenu";
+import { getAboutArticles } from "@/lib/about";
+import { getWorkItems } from "@/lib/work";
 
 export default function Header() {
   const router = useRouter();
