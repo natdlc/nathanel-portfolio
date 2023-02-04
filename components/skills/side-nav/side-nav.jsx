@@ -1,13 +1,20 @@
+import { getSkillItems } from "@/lib/skills";
 import styles from "./side-nav.module.css";
 
-export default function SideNav() {
+const skills = getSkillItems();
+skills.unshift({ title: "hero" });
+
+export default function SideNav({ visibleSection }) {
   return (
     <div className={styles.div}>
-      <a href="#"></a>
-      <a href="#design"></a>
-      <a href="#frontend"></a>
-      <a href="#backend"></a>
-      <a href="#deployment"></a>
+      {skills.map((skill) => (
+        <a
+          className={
+            visibleSection === skill.title ? styles.visible : styles.hidden
+          }
+          href={skill.title === "hero" ? "#" : `#${skill.title}`}
+        ></a>
+      ))}
     </div>
   );
 }

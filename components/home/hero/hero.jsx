@@ -37,7 +37,7 @@ export default function Hero() {
           </p>
         )}
       </InView>
-      <InView threshold={0}>
+      <InView threshold={0} initialInView>
         {({ inView, ref }) => (
           <a
             ref={ref}

@@ -1,3 +1,22 @@
+@keyframes cta-initial-delay {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(200%);
+  }
+  80% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    transition: all 2s;
+  }
+}
+
 .section {
   height: 100vh;
   display: flex;
@@ -16,6 +35,8 @@
 
 .cta {
   margin-top: 20px;
+  animation-name: cta-initial-delay;
+  animation-duration: 6s;
 }
 
 /* greet animation */

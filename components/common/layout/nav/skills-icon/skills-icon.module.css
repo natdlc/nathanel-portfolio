@@ -9,7 +9,7 @@
 
   100% {
     opacity: 1;
-    transform: rotate(45deg) scale(1);
+    transform: rotate(0) scale(1);
     filter: blur(0);
   }
 }
@@ -30,13 +30,11 @@
 }
 
 .image {
-  transform: rotate(45deg) scale(1);
   transition: all 0.3s;
   animation-name: skills-icon;
   animation-duration: 2s;
 }
 
 .rotated {
-  transform: rotate(225deg);
   transition: all 0.8s;
 }

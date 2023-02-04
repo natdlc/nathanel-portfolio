@@ -1,10 +1,15 @@
 import { InView } from "react-intersection-observer";
 import styles from "./hero.module.css";
 
-export default function Hero() {
+export default function Hero({ dispatch }) {
   return (
     <section className={styles.hero}>
-      <InView>
+      <InView
+        onChange={(inView) => {
+          if (inView)
+            dispatch({ type: "set_visible_section", section: "hero" });
+        }}
+      >
         {({ inView, ref }) => (
           <h1 ref={ref} className={inView ? styles.shownH1 : styles.hiddenH1}>
             my skills

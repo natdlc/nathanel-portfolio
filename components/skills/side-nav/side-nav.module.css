@@ -58,6 +58,12 @@
   animation-duration: 1.5s;
 }
 
-.active {
-  background-color: black;
+.visible {
+  background: black;
+  transition: all 0.4s;
+}
+
+.hidden {
+  background: white;
+  transition: all 0.4s;
 }

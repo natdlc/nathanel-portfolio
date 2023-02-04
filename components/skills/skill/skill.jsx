@@ -2,10 +2,16 @@ import { InView } from "react-intersection-observer";
 import styles from "./skill.module.css";
 import Tool from "./tool/tool";
 
-export default function Skill({ item, setInViewSection }) {
+export default function Skill({ item, dispatch }) {
   return (
     <section id={item.title} className={styles.section}>
-      <InView>
+      <InView
+        onChange={(inView) =>
+          inView
+            ? dispatch({ type: "set_visible_section", section: item.title })
+            : null
+        }
+      >
         {({ inView, ref }) => (
           <h3
             ref={ref}
