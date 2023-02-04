@@ -1,4 +1,4 @@
-import useSkillsNav from "@/hooks/useSkillsNav";
+import SkillsIconCover from "@/components/misc/skills-icon-cover";
 import Header from "./header/header";
 import SkillsIcon from "./skills-icon/skills-icon";
 import SkillsNav from "./skills-nav/skills-nav";
@@ -8,9 +8,10 @@ export default function FixedNav({ skillsNav }) {
   return (
     <>
       <Header />
+      <SkillsIconCover />
       <SkillsNav visibleSection={skillsNav.state.visibleSection} />
-      <Socials />
       <SkillsIcon />
+      <Socials />
     </>
   );
 }

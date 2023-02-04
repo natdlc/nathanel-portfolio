@@ -17,7 +17,6 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
-      {/* <PageTransition /> */}
       <Layout skillsNav={skillsNav}>
         <Component dispatch={skillsNav.dispatch} {...pageProps} />
       </Layout>
