@@ -1,0 +1,40 @@
+/* animations start */
+
+@keyframes skills-icon {
+  0% {
+    opacity: 0;
+    transform: rotate(-450deg) scale(0.1);
+    filter: blur(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* animations end */
+
+.aside {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+
+.image {
+  transition: all 0.3s;
+  animation-name: skills-icon;
+  animation-duration: 2s;
+}
+
+.rotated {
+  transition: all 0.8s;
+}

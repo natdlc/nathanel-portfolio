@@ -7,8 +7,14 @@
   font-family: inherit;
 }
 
+*::selection {
+  color: white;
+  background-color: black;
+}
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -65,7 +71,7 @@ h3 {
 
 h4 {
   font-size: 0.8rem;
-  opacity: 50%;
+  opacity: 50% !important;
   font-weight: normal;
   letter-spacing: 7px;
   text-transform: uppercase;

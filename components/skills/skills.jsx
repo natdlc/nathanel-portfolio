@@ -1,44 +1,33 @@
 import styles from "./skills.module.css";
-
 import { getSkillItems } from "@/lib/skills";
+import SideNav from "./side-nav/side-nav";
+import Hero from "./hero/hero";
+import Skill from "./skill/skill";
+import { useReducer } from "react";
 
 const skillItems = getSkillItems();
 
+const initialState = { visibleSection: "hero" };
+
+const reducer = (state, action) => {
+  if (action.type === "set_visible_section") {
+    return {
+      visibleSection: action.section,
+    };
+  }
+  throw Error("Unknown action");
+};
+
 export default function SkillsPage() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <>
-      <section className={styles.hero}>
-        <h1>my skills</h1>
-        <div className={styles.buttons}>
-          <a href="#design">
-            <button>design</button>
-          </a>
-          <a href="#front-end">
-            <button>front-end</button>
-          </a>
-          <a href="#back-end">
-            <button>back-end</button>
-          </a>
-          <a href="#deployment">
-            <button>deployment</button>
-          </a>
-        </div>
-      </section>
+      <SideNav visibleSection={state.visibleSection} />
+      <Hero dispatch={dispatch} />
 
       {skillItems.map((item) => (
-        <section key={item.title} id={item.title} className={styles.section}>
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
-          <ul className={styles.list}>
-            {item.tools.map((tool) => (
-              <li key={tool.value} className={styles.list_item}>
-                <p className={styles.list_key}>{tool.key}</p>
-                <span className={styles.list_line}></span>
-                <p className={styles.list_value}>{tool.value}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <Skill key={item.title} item={item} dispatch={dispatch} />
       ))}
     </>
   );

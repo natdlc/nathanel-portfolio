@@ -1,59 +1,50 @@
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding-bottom: 120px;
-}
-
-.buttons {
-    display: flex;
-}
-
-.buttons button {
-    font-size: 24px;
-}
-
 .section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    padding-bottom: 120px;
-
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 120px;
 }
 
 .section > p {
-    max-width: 800px;
-    text-align: center;
+  max-width: 800px;
+  text-align: center;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    width: 400px;
-    padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 400px;
+  padding-top: 20px;
 }
 
 .list_item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .list_key {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .list_line {
-    flex-grow: 1;
-    height: 1px;
-    background: black;
-    margin: 0 20px;
+  flex-grow: 1;
+  height: 1px;
+  background: black;
+  margin: 0 20px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 5s;
+}
+
+.shown {
+  opacity: 1;
+  transition: all 5s;
 }

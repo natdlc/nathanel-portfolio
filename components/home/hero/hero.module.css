@@ -1,3 +1,22 @@
+@keyframes cta-initial-delay {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(200%);
+  }
+  80% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    transition: all 2s;
+  }
+}
+
 .section {
   height: 100vh;
   display: flex;
@@ -16,4 +35,59 @@
 
 .cta {
   margin-top: 20px;
+  animation-name: cta-initial-delay;
+  animation-duration: 6s;
+}
+
+/* greet animation */
+.hideGreet {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-300%);
+}
+.showGreet {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 0.8s;
+}
+
+/* name animation */
+.hideName {
+  opacity: 0;
+  letter-spacing: 100px;
+  filter: blur(5px);
+  transform: translateX(30%);
+}
+.showName {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+/* description animation */
+.hideDescription {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-20%);
+}
+.showDescription {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1.2s;
+}
+
+/* cta animation */
+.hideCTA {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateY(200%);
+}
+.showCTA {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  transition: all 2s;
 }

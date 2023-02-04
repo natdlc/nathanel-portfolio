@@ -9,9 +9,11 @@ export default function Socials() {
   return (
     <aside className={styles.aside}>
       <Anchor href="https://twitter.com/nathanelcorpuz" target="_blank">
+        <span className={styles.anchor_line}></span>
         <Image src={twitterIcon} width={20} alt="twitter icon" />
       </Anchor>
       <Anchor href="https://linkedin.com/in/nathanelcorpuz/" target="_blank">
+        <span className={styles.anchor_line}></span>
         <Image src={linkedinIcon} width={20} alt="linked in icon" />
       </Anchor>
     </aside>

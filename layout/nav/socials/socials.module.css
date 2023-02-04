@@ -1,0 +1,75 @@
+/* animations start */
+
+@keyframes socials-icon {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(5px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes socials-line {
+  0% {
+    width: 0;
+  }
+
+  80% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* animations end */
+
+.aside {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
+.aside img {
+  /* transform: scale(1); */
+  transition: all 0.3s;
+  animation-name: socials-icon;
+  animation-duration: 4s;
+}
+
+.aside a {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.anchor_line {
+  position: absolute;
+  margin-left: -50px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: black;
+  animation-name: socials-line;
+  animation-duration: 2.5s;
+}
+
+.aside a:hover img {
+  /* transform: scale(1.2); */
+  margin-left: 5px;
+}

@@ -1,12 +1,28 @@
+import { InView } from "react-intersection-observer";
 import styles from "./contact.module.css";
 
 export default function Contact() {
+  const toggler = (inView) => (inView ? styles.shown : styles.hidden);
   return (
     <section id="contact" className={styles.section}>
-      <h3>let's chat</h3>
-      <a href="mailto:nathanelwebdesign@gmail.com">
-        nathanelwebdesign@gmail.com
-      </a>
+      <InView rootMargin={"-200px 0px"}>
+        {({ inView, ref }) => (
+          <h3 ref={ref} className={toggler(inView)}>
+            let's chat
+          </h3>
+        )}
+      </InView>
+      <InView rootMargin={"-200px 0px"}>
+        {({ inView, ref }) => (
+          <a
+            ref={ref}
+            className={toggler(inView)}
+            href="mailto:nathanelwebdesign@gmail.com"
+          >
+            nathanelwebdesign@gmail.com
+          </a>
+        )}
+      </InView>
     </section>
   );
 }
