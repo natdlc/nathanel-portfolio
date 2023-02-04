@@ -4,11 +4,6 @@
     filter: blur(5px);
     transform: translateY(200%);
   }
-  37% {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(200%);
-  }
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -35,7 +30,7 @@
 .cta {
   margin-top: 20px;
   animation-name: cta-initial-delay;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 /* greet animation */

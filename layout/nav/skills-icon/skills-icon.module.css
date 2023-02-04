@@ -1,22 +1,19 @@
 /* animations start */
 
-@keyframes skills-icon {
+@keyframes fade-in {
   0% {
     opacity: 0;
-    transform: rotate(-450deg) scale(0.1);
-    filter: blur(5px);
   }
 
   100% {
     opacity: 1;
-    transform: rotate(0) scale(1);
-    filter: blur(0);
   }
 }
 
 /* animations end */
 
 .aside {
+  z-index: 99;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -29,12 +26,14 @@
   margin: 10px;
 }
 
-.image {
-  transition: all 0.3s;
-  animation-name: skills-icon;
-  animation-duration: 2s;
+.initial_animation {
+  animation: fade-in 2s forwards alternate;
 }
 
-.rotated {
-  transition: all 0.8s;
+.default {
+  transition: all 1s;
+}
+
+.on_skills_page {
+  transform: rotateX(180deg);
 }

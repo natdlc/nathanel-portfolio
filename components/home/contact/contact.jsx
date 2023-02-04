@@ -8,7 +8,7 @@ export default function Contact() {
       <InView rootMargin={"-200px 0px"}>
         {({ inView, ref }) => (
           <h3 ref={ref} className={toggler(inView)}>
-            let's chat
+            Let's build your website
           </h3>
         )}
       </InView>
