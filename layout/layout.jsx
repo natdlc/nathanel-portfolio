@@ -1,10 +1,10 @@
 import Footer from "./footer/footer";
 import FixedNav from "./nav/nav";
 
-export default function Layout({ children }) {
+export default function Layout({ children, skillsNav }) {
   return (
     <>
-      <FixedNav />
+      <FixedNav skillsNav={skillsNav} />
       <main>{children}</main>
       <Footer />
     </>

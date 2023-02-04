@@ -1,10 +1,10 @@
 import { getSkillItems } from "@/lib/skills";
-import styles from "./side-nav.module.css";
+import styles from "./skills-nav.module.css";
 
 const skills = getSkillItems();
 skills.unshift({ title: "hero" });
 
-export default function SideNav({ visibleSection }) {
+export default function SkillsNav({ visibleSection }) {
   return (
     <div className={styles.div}>
       {skills.map((skill) => (
