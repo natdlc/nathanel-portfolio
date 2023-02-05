@@ -4,25 +4,18 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function SkillsIcon() {
-  const [initialAnimationComplete, setInitialAnimationComplete] =
+  const [isInitialAnimationComplete, setIsInitialAnimationComplete] =
     useState(false);
 
   const router = useRouter();
   const onSkillsPage = router.pathname === "/skills";
 
-  const delay = (ms) => setTimeout(() => setInitialAnimationComplete(true), ms);
+  const delay = (ms) =>
+    setTimeout(() => setIsInitialAnimationComplete(true), ms);
 
   useEffect(() => {
-    delay(2000);
+    delay(100);
   }, []);
-
-  let imageClassName;
-
-  if (!initialAnimationComplete) {
-    imageClassName = styles.initial_animation;
-  } else {
-    imageClassName = styles.default;
-  }
 
   return (
     <aside className={styles.aside}>
@@ -34,7 +27,9 @@ export default function SkillsIcon() {
           viewBox="0 0 100 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={`${styles.svg} ${onSkillsPage && styles.on_skills_page}`}
+          className={`${styles.svg} ${onSkillsPage && styles.on_skills_page} ${
+            !isInitialAnimationComplete && styles.initial_load_animation
+          }`}
         >
           <line x1="22" y1="38.5" x2="79" y2="38.5" stroke="black" />
           <line x1="22" y1="51.5" x2="69" y2="51.5" stroke="black" />
