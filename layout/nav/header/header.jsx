@@ -26,10 +26,12 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <p className={styles.logo}>nathanel.dev</p>
-      <nav>
+      <nav className={styles.mobile_nav}>
+        
+      </nav>
+      <nav className={styles.nav}>
         <ul className={styles.ul}>
           <li>
-            {/* <Anchor href={isNotHome ? "/" : "#"}>Home</Anchor> */}
             <Link scroll={false} href="/" className={styles.link}>
               Home
             </Link>

@@ -96,3 +96,15 @@
   padding: 10px 20px;
   display: inline-block;
 }
+
+/* responsiveness */
+
+@media (max-width: 1000px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile_nav {
+    
+  }
+}
