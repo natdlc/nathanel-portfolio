@@ -13,14 +13,20 @@ export default function SkillsNav({ visibleSection }) {
       {skills.map((skill) => (
         <a
           key={skill.title}
-          className={`${
-            visibleSection === skill.title
-              ? styles.visible_section
-              : styles.non_visible_section
-          }
+          className={`
           ${router.pathname.includes("skills") ? styles.shown : styles.hidden}`}
           href={skill.title === "hero" ? "#" : `#${skill.title}`}
-        ></a>
+        >
+          <span className={styles.icon_container}>
+            <span
+              className={
+                visibleSection === skill.title
+                  ? styles.section_visible
+                  : styles.section_hidden
+              }
+            ></span>
+          </span>
+        </a>
       ))}
     </div>
   );
