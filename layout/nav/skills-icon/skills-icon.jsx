@@ -29,6 +29,16 @@ export default function SkillsIcon() {
   return (
     <aside className={styles.aside}>
       <Link className={styles.link} href={onSkillsPage ? "/" : "skills"}>
+        {/* <Image
+          className={`${imageClassName} ${
+            onSkillsPage && styles.on_skills_page
+          }`}
+          src={skillsIcon}
+          width={50}
+          alt="skills button icon"
+        /> */}
+
+        {/* SVG TEST BELOW */}
         <Image
           className={`${imageClassName} ${
             onSkillsPage && styles.on_skills_page
@@ -37,6 +47,7 @@ export default function SkillsIcon() {
           width={50}
           alt="skills button icon"
         />
+
       </Link>
     </aside>
   );
