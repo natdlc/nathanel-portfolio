@@ -1,7 +1,7 @@
 .div {
   z-index: 99;
-  bottom: 150px;
-  right: 50px;
+  bottom: 20%;
+  right: 60px;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 
 .shown {
   opacity: 1;
-  transform: translateY(0) rotate(45deg);
+  transform: translateX(0) rotate(45deg);
   width: 20px;
   height: 20px;
   border: 1px solid black;
@@ -45,7 +45,7 @@
 }
 
 .hidden {
-  transform: translateY(2000%) rotate(45deg);
+  transform: translateX(2000%) rotate(45deg);
   opacity: 0;
   width: 20px;
   height: 20px;

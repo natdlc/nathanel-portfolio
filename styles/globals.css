@@ -23,8 +23,10 @@ body {
 
 button {
   padding: 15px 35px;
-  color: white;
-  background-color: black;
+  /* color: white;
+  background-color: black; */
+  background-color: white;
+  color: black;
   border-radius: 0;
   font-size: 1rem;
   text-transform: uppercase;
@@ -38,8 +40,10 @@ button {
 
 button:hover {
   border: 1px solid black;
-  color: black;
-  background: white;
+  /* color: black; */
+  /* background: white; */
+  color: white;
+  background: black;
 }
 
 a {
