@@ -16,6 +16,15 @@
   font-size: 24px;
 }
 
+.buttons a:nth-child(2) button {
+  border-left: none;
+  border-right: none;
+}
+
+.buttons a:nth-child(3) button {
+  border-right: none;
+}
+
 /* h1 animation */
 .hiddenH1 {
   transition: all 1s;
@@ -33,7 +42,6 @@
 .hiddenButtons {
   opacity: 0;
   filter: blur(3px);
-  gap: 50px;
   transition: all 0.6s;
 }
 .shownButtons {
