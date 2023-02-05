@@ -30,7 +30,7 @@ export default function Header() {
         <ul className={styles.ul}>
           <li>
             {/* <Anchor href={isNotHome ? "/" : "#"}>Home</Anchor> */}
-            <Link href="/" className={styles.link}>
+            <Link scroll={false} href="/" className={styles.link}>
               Home
             </Link>
           </li>

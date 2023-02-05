@@ -1,9 +1,10 @@
+import PageTransition from "@/components/misc/page-transitions";
 import SkillsPage from "@/components/skills/skills";
 import Head from "next/head";
 
 export default function Skills({ dispatch }) {
   return (
-    <>
+    <PageTransition>
       <Head>
         <title>My Skills - Nathanel - Web Developer Portfolio</title>
         <meta
@@ -14,6 +15,6 @@ export default function Skills({ dispatch }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SkillsPage dispatch={dispatch} />
-    </>
+    </PageTransition>
   );
 }
