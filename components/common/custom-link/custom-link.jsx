@@ -15,71 +15,36 @@ export default function CustomLink({ link }) {
 
   let href;
 
-  // test
   let linkComponent;
 
   if (shouldScrollToTop) {
-    // test
-    console.log("\n");
-    console.log("shouldScrollToTop || homeScrollToTop");
-    console.log(link.id === "home");
     linkComponent = (
       <a className={styles.custom_link} href="#">
         {title}
       </a>
     );
-
-    // return (
-    //   <a className={styles.custom_link} href="#">
-    //     {title}
-    //   </a>
-    // );
   }
 
   if (fragmentId && currentPath !== path) {
     href = `${link.path}#${fragmentId}`;
-    console.log("\n");
-    console.log("fragmentId && currentPath !== path");
-    console.log(link.id === "home");
-    // test
     linkComponent = (
       <Link className={styles.custom_link} scroll={false} href={href}>
         {title}
       </Link>
     );
-
-    // return (
-    //   <Link className={styles.custom_link} scroll={false} href={href}>
-    //     {title}
-    //   </Link>
-    // );
   }
 
   if (fragmentId && currentPath === path) {
     href = `#${fragmentId}`;
-    console.log("\n");
-    console.log("fragmentId && currentPath === path");
-    console.log(link.id === "home");
-    // test
     linkComponent = (
       <a className={styles.custom_link} href={href}>
         {title}
       </a>
     );
-
-    // return (
-    //   <a className={styles.custom_link} href={href}>
-    //     {title}
-    //   </a>
-    // );
   }
 
-  if (!fragmentId) {
+  if (!fragmentId && !shouldScrollToTop) {
     href = path;
-    console.log("\n");
-    console.log("!fragmentId");
-    console.log(link.id === "home");
-    // test
     linkComponent = (
       <Link className={styles.custom_link} scroll={false} href={href}>
         {title}
@@ -87,12 +52,5 @@ export default function CustomLink({ link }) {
     );
   }
 
-  // test
   return <li>{linkComponent}</li>;
-
-  // return (
-  //   <Link className={styles.custom_link} scroll={false} href={href}>
-  //     {title}
-  //   </Link>
-  // );
 }
