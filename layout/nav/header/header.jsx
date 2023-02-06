@@ -13,9 +13,6 @@ import CustomLink from "@/components/common/custom-link/custom-link";
 const mainMenu = getMainMenu();
 
 export default function Header() {
-  const router = useRouter();
-  const isNotHome = router.pathname !== "/";
-
   const aboutSubmenu = useSubmenu({
     path: "about",
     title: "About",
@@ -31,30 +28,13 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <p className={styles.logo}>nathanel.dev</p>
-      {/* <MobileNav /> */}
-      {/* <nav className={styles.nav}>
-        <ul className={styles.ul}>
-          <li>
-            <Link scroll={false} href="/" className={styles.link}>
-              Home
-            </Link>
-          </li>
-          <Submenu submenu={aboutSubmenu} />
-          <Submenu submenu={workSubmenu} />
-          <li>
-            <Link href="blog" className={styles.link}>
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Anchor href={isNotHome ? "/#contact" : "#contact"}>Contact</Anchor>
-          </li>
-        </ul>
-      </nav> */}
       <nav className={styles.nav}>
         <ul className={styles.ul}>
           {mainMenu.map((link) => (
-            <CustomLink key={link.id} link={link} />
+            <li key={link.pathname + link.hash}>
+              <CustomLink link={link} />
+              {link.hasSubmenu ? <Submenu submenu={aboutSubmenu} /> : null}
+            </li>
           ))}
         </ul>
       </nav>

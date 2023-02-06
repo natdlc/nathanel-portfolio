@@ -1,7 +1,5 @@
 import AboutItem from "./about-item/about-item";
 import { getAboutArticles } from "@/lib/about";
-import { useEffect, useRef } from "react";
-import { useRouter } from "next/router";
 import useScrollIntoView from "@/hooks/useScrollIntoView";
 
 const articles = getAboutArticles();

@@ -3,11 +3,14 @@ import Layout from "@/layout/layout";
 import "@/styles/globals.css";
 import { Montserrat } from "@next/font/google";
 import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps, router }) {
   const skillsNav = useSkillsNav();
+
+  console.log(!router.asPath.includes("#"));
 
   return (
     <>
