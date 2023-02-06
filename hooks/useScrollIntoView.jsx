@@ -6,7 +6,7 @@ export default function useScrollIntoView(fragmentId) {
   const router = useRouter();
 
   useEffect(() => {
-    if (ref.current && router.asPath === `/#${fragmentId}`) {
+    if (ref.current && router.asPath === `${router.pathname}#${fragmentId}`) {
       ref.current.scrollIntoView();
     }
   }, [ref.current, router.asPath]);
