@@ -1,10 +1,12 @@
+import useScrollIntoView from "@/hooks/useScrollIntoView";
 import { InView } from "react-intersection-observer";
 import styles from "./skill.module.css";
 import Tool from "./tool/tool";
 
 export default function Skill({ item, dispatch }) {
+  const ref = useScrollIntoView(item.id);
   return (
-    <section id={item.title} className={styles.section}>
+    <section ref={ref} id={item.id} className={styles.section}>
       <InView
         onChange={(inView) =>
           inView

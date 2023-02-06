@@ -19,12 +19,7 @@ export default function SkillsIcon() {
 
   return (
     <aside className={styles.aside}>
-      <Link
-        scroll={false}
-        className={styles.link}
-        href={onSkillsPage ? "/" : "skills"}
-      >
-        {/* SVG TEST BELOW */}
+      <Link className={styles.link} href={onSkillsPage ? "/" : "skills"}>
         <svg
           width="100"
           height="100"

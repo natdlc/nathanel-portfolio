@@ -51,8 +51,8 @@ export default function Header() {
           </li>
         </ul>
       </nav> */}
-      <nav>
-        <ul>
+      <nav className={styles.nav}>
+        <ul className={styles.ul}>
           {mainMenu.map((link) => (
             <li key={link.id}>
               <CustomLink link={link} />

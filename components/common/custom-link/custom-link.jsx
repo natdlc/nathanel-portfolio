@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styles from "./custom-link.module.css";
 
 export default function CustomLink({ link }) {
   const { pathname: currentPath } = useRouter();
@@ -14,13 +15,17 @@ export default function CustomLink({ link }) {
   let href;
 
   if (shouldScrollToTop || homeScrollToTop) {
-    return <a href="#">{title}</a>;
+    return (
+      <a className={styles.custom_link} href="#">
+        {title}
+      </a>
+    );
   }
 
   if (fragmentId && currentPath !== path) {
-    href = `/#${fragmentId}`;
+    href = `${link.path}#${fragmentId}`;
     return (
-      <Link scroll={false} href={href}>
+      <Link className={styles.custom_link} scroll={false} href={href}>
         {title}
       </Link>
     );
@@ -28,7 +33,11 @@ export default function CustomLink({ link }) {
 
   if (fragmentId && currentPath === path) {
     href = `#${fragmentId}`;
-    return <a href={href}>{title}</a>;
+    return (
+      <a className={styles.custom_link} href={href}>
+        {title}
+      </a>
+    );
   }
 
   if (!fragmentId) {
@@ -36,7 +45,7 @@ export default function CustomLink({ link }) {
   }
 
   return (
-    <Link scroll={false} href={href}>
+    <Link className={styles.custom_link} scroll={false} href={href}>
       {title}
     </Link>
   );

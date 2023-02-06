@@ -1,10 +1,16 @@
+import useScrollIntoView from "@/hooks/useScrollIntoView";
+import { useRouter } from "next/router";
+import { useEffect, useRef } from "react";
 import { InView } from "react-intersection-observer";
 import styles from "./about-item.module.css";
 
 export default function AboutItem({ item }) {
   const toggleView = (inView) => (inView ? styles.shown : styles.hidden);
+
+  const ref = useScrollIntoView(item.id);
+
   return (
-    <article id={item.id} className={styles.article}>
+    <article ref={ref} id={item.id} className={styles.article}>
       <InView>
         {({ inView, ref }) => (
           <h3 ref={ref} className={toggleView(inView)}>
