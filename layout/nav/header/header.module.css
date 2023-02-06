@@ -97,14 +97,18 @@
   display: inline-block;
 }
 
-/* responsiveness */
+@media (max-width: 500px) {
+  .header {
+    padding: 10px;
+  }
+
+  .logo {
+    padding: 10px;
+  }
+}
 
 @media (max-width: 1000px) {
   .nav {
     display: none;
-  }
-
-  .mobile_nav {
-    
   }
 }

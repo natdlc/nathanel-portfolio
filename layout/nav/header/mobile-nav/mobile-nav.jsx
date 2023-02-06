@@ -1,18 +1,16 @@
-import { useRouter } from "next/router";
-import Link from "next/link";
-import styles from "./header.module.css";
 import Anchor from "@/components/common/anchor/anchor";
 import Submenu from "@/components/common/submenu/submenu";
 import useSubmenu from "@/hooks/useSubmenu";
 import { getAboutArticles } from "@/lib/about";
 import { getWorkItems } from "@/lib/work";
-import MobileNav from "./mobile-nav/mobile-nav";
-import { getMainMenu } from "@/lib/nav";
-import CustomLink from "@/components/common/custom-link/custom-link";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import styles from "./mobile-nav.module.css";
 
-const mainMenu = getMainMenu();
+export default function MobileNav() {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
-export default function Header() {
   const router = useRouter();
   const isNotHome = router.pathname !== "/";
 
@@ -29,18 +27,24 @@ export default function Header() {
   });
 
   return (
-    <header className={styles.header}>
-      <p className={styles.logo}>nathanel.dev</p>
-      {/* <MobileNav /> */}
-      {/* <nav className={styles.nav}>
+    <nav className={styles.nav}>
+      <button
+        onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+        className={`${styles.mobile_menu} ${
+          isMobileNavOpen ? styles.open : ""
+        }`}
+      ></button>
+      {isMobileNavOpen ? (
         <ul className={styles.ul}>
           <li>
             <Link scroll={false} href="/" className={styles.link}>
               Home
             </Link>
           </li>
-          <Submenu submenu={aboutSubmenu} />
-          <Submenu submenu={workSubmenu} />
+
+          <Submenu submenu={aboutSubmenu} isMobile />
+          <Submenu submenu={workSubmenu} isMobile />
+
           <li>
             <Link href="blog" className={styles.link}>
               Blog
@@ -50,16 +54,7 @@ export default function Header() {
             <Anchor href={isNotHome ? "/#contact" : "#contact"}>Contact</Anchor>
           </li>
         </ul>
-      </nav> */}
-      <nav>
-        <ul>
-          {mainMenu.map((link) => (
-            <li key={link.id}>
-              <CustomLink link={link} />
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+      ) : null}
+    </nav>
   );
 }

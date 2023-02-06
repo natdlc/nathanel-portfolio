@@ -22,7 +22,11 @@ export default function App({ Component, pageProps, router }) {
         <AnimatePresence
           mode="wait"
           initial={false}
-          onExitComplete={() => window.scrollTo(0, 0)}
+          onExitComplete={() => {
+            if (router.asPath === "/#about") {
+              window.scrollTo(x, y);
+            } else window.scrollTo(0, 0);
+          }}
         >
           <Component
             key={router.asPath}
