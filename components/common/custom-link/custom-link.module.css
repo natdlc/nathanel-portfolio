@@ -1,4 +1,15 @@
+.custom_link_container {
+  position: relative;
+}
+
 .custom_link {
-  padding: 10px 20px;
   display: inline-block;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-bottom: 1px solid white;
+  transition: all 0.4s;
+}
+
+.custom_link:hover {
+  border-bottom: 1px solid black;
 }

@@ -1,5 +1,5 @@
 import AboutItem from "./about-item/about-item";
-import { getAboutArticles } from "@/lib/about";
+import { getAboutArticles } from "@/lib/content/about";
 import useScrollIntoView from "@/hooks/useScrollIntoView";
 
 const articles = getAboutArticles();

@@ -1,4 +1,6 @@
-import { getSkillItems } from "@/lib/skills";
+import { getSkillItems } from "@/lib/content/skills";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import Hero from "./hero/hero";
 import Skill from "./skill/skill";
 

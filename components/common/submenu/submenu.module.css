@@ -1,23 +1,7 @@
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 .hidden {
   display: none;
 }
-
-.submenu_parent {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .submenu_parent > a {
   padding: 0;
 }
@@ -27,29 +11,25 @@
   z-index: 99;
   left: 0;
   width: max-content;
-  border: 1px solid black;
   background: white;
-  padding: 20px;
-  animation-name: fade-in;
-  animation-duration: 0.3s;
-}
-
-.menu > li {
-  cursor: pointer;
-  opacity: 1;
-  animation-name: fade-in;
-  animation-duration: 0.3s;
+  padding-top: 25px;
+  
 }
 
 .menu > li > a {
   display: block;
-  letter-spacing: 1px;
-  padding: 15px 5px;
+  cursor: pointer;
+  width: max-content;
+  margin-bottom: 25px;
+  padding: 10px 10px;
+  border-bottom: 1px solid white;
+  border-left: 5px solid black;
   transition: all 0.5s;
 }
 
 .menu > li > a:hover {
-  font-size: 18px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid white;
 }
 
 .menu.mobile {
@@ -87,4 +67,3 @@
   border-bottom: 1px solid red;
   transform: rotate(-45deg);
 }
-

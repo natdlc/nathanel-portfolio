@@ -14,14 +14,23 @@
 
 .svg line {
   filter: blur(0);
-  transition: all 1.5s;
+  transition: all 0.5s;
+}
+
+.svg:hover,
+.on_skills_page:hover {
+  transform: scale(1.1);
+}
+
+.svg,
+.on_skills_page {
+  transition: all 1s;
 }
 
 /* PAGE TRANSITION ANIMATIONS */
 
 /* line 1 */
 .on_skills_page line:nth-child(9) {
-
   transform: translateY(5.4%) scaleY(0.815);
 }
 
@@ -32,43 +41,36 @@
 
 /* line 3 */
 .on_skills_page line:nth-child(7) {
-
   transform: translateY(1.5%) scaleY(0.98);
 }
 
 /* line 4 */
 .on_skills_page line:nth-child(6) {
-
   transform: translateX(-18%) scaleX(1.19);
 }
 
 /* line 5 */
 .on_skills_page line:nth-child(5) {
-
   transform: translateY(28%) scaleY(0.76);
 }
 
 /* line 6 */
 .on_skills_page line:nth-child(4) {
-
   transform: translateX(-48%) scaleX(1.62);
 }
 
 /* line 7 */
 .on_skills_page line:nth-child(3) {
-
   transform: translateY(-114%) scaleY(2.75);
 }
 
 /* line 8 */
 .on_skills_page line:nth-child(2) {
-
   transform: translateX(-3%) scaleX(1.185);
 }
 
 /* line 9 */
 .on_skills_page line:nth-child(1) {
-
   transform: translateX(-4%) scaleX(1.21);
 }
 

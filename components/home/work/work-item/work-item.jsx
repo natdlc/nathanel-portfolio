@@ -1,11 +1,13 @@
+import useScrollIntoView from "@/hooks/useScrollIntoView";
 import { InView } from "react-intersection-observer";
 import styles from "./work-item.module.css";
 
 export default function WorkItem({ item }) {
+  const ref = useScrollIntoView(item.id);
   const toggler = (inView) => (inView ? styles.shown : styles.hidden);
 
   return (
-    <article id={item.id} className={styles.article}>
+    <article ref={ref} id={item.id} className={styles.article}>
       <header className={styles.header}>
         <InView>
           {({ inView, ref }) => (

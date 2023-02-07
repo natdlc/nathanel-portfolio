@@ -1,8 +1,8 @@
 import Anchor from "@/components/common/anchor/anchor";
 import Submenu from "@/components/common/submenu/submenu";
 import useSubmenu from "@/hooks/useSubmenu";
-import { getAboutArticles } from "@/lib/about";
-import { getWorkItems } from "@/lib/work";
+import { getAboutArticles } from "@/lib/content/about";
+import { getWorkItems } from "@/lib/content/work";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";

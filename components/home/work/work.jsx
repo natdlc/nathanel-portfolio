@@ -1,5 +1,5 @@
 import useScrollIntoView from "@/hooks/useScrollIntoView";
-import { getWorkItems } from "@/lib/work";
+import { getWorkItems } from "@/lib/content/work";
 import WorkItem from "./work-item/work-item";
 
 const items = getWorkItems();
