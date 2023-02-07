@@ -1,3 +1,4 @@
+import { MobileNavProvider } from "@/context/mobile-nav-context";
 import useSkillsNav from "@/hooks/useSkillsNav";
 import Layout from "@/layout/layout";
 import "@/styles/globals.css";
@@ -28,22 +29,24 @@ export default function App({ Component, pageProps, router }) {
           }
         `}
       </style>
-      <Layout skillsNav={skillsNav}>
-        <AnimatePresence
-          mode="wait"
-          initial={false}
-          onExitComplete={() => {
-            window.scrollTo(0, 0);
-            setTimeout(() => setIsSmooth(true), 200);
-          }}
-        >
-          <Component
-            key={router.asPath}
-            dispatch={skillsNav.dispatch}
-            {...pageProps}
-          />
-        </AnimatePresence>
-      </Layout>
+      <MobileNavProvider>
+        <Layout skillsNav={skillsNav}>
+          <AnimatePresence
+            mode="wait"
+            initial={false}
+            onExitComplete={() => {
+              window.scrollTo(0, 0);
+              setTimeout(() => setIsSmooth(true), 200);
+            }}
+          >
+            <Component
+              key={router.asPath}
+              dispatch={skillsNav.dispatch}
+              {...pageProps}
+            />
+          </AnimatePresence>
+        </Layout>
+      </MobileNavProvider>
     </>
   );
 }

@@ -2,9 +2,15 @@ import Link from "next/link";
 import styles from "./submenu.module.css";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { useContext } from "react";
+import MobileNavContext from "@/context/mobile-nav-context";
 
 export default function SubmenuChildren({ items, isMobile }) {
   const router = useRouter();
+  const { setIsMobileNavOpen } = useContext(MobileNavContext);
+
+  const onClickHandler = () => setIsMobileNavOpen(false);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,9 +21,15 @@ export default function SubmenuChildren({ items, isMobile }) {
         {items.map(({ pathname, title, hash }) => (
           <li key={pathname + hash}>
             {router.pathname === pathname ? (
-              <a href={hash}>{title}</a>
+              <a onClick={onClickHandler} href={hash}>
+                {title}
+              </a>
             ) : (
-              <Link scroll={false} href={{ pathname, hash }}>
+              <Link
+                onClick={onClickHandler}
+                scroll={false}
+                href={{ pathname, hash }}
+              >
                 {title}
               </Link>
             )}

@@ -1,65 +1,8 @@
-.mobile_menu {
-  width: 70px;
-  position: relative;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  transition: all 0.3s;
-}
-
-.mobile_menu:hover {
-  background: none;
-  border: none;
-}
-
-.mobile_menu::before,
-.mobile_menu::after {
-  position: absolute;
-  content: "";
-  width: 50%;
-  height: 1px;
-  background: black;
-  transition: all 0.3s;
-}
-
-.mobile_menu::before {
-  transform: translateY(500%) scaleX(1);
-}
-
-.mobile_menu::after {
-  transform: translateY(-500%) scaleX(1);
-}
-
-.mobile_menu:hover::before {
-  transform: translateY(500%) scaleX(1.23);
-}
-
-.mobile_menu:hover::after {
-  transform: translateY(-500%) scaleX(1.23);
-}
-
-.mobile_menu.open::before {
-  transform: rotate(45deg);
-}
-
-.mobile_menu.open::after {
-  transform: rotate(-45deg);
-}
-
-.mobile_menu.open:hover::before {
-  transform: rotate(45deg) scaleX(1.23);
-}
-
-.mobile_menu.open:hover::after {
-  transform: rotate(-45deg) scaleX(1.23);
-}
-
-.div {
+.nav_content_container {
   position: fixed;
-  padding-top: 20px;
+  overflow-y: auto;
   top: 60px;
+  padding-top: 20px;
   bottom: 0;
   right: 0;
   left: 0;
@@ -69,12 +12,51 @@
   transform: translateY(-200%);
   transition: all 0.8s;
   z-index: -1;
-  /* helper */
-  background-color: yellow;
+  border-bottom: 1px solid black;
+  background-color: white;
 }
 
-.div a {
-  font-size: 24px !important;
+.mobile_menu_btn {
+  width: 30px;
+  position: relative;
+  padding: 20px 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: all 0.3s;
+}
+
+.mobile_menu_btn:hover {
+  background: none;
+  border: none;
+}
+
+.mobile_menu_btn::before,
+.mobile_menu_btn::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: black;
+  transition: all 0.3s;
+}
+
+.mobile_menu_btn::before {
+  transform: translateY(500%) scaleX(1);
+}
+
+.mobile_menu_btn::after {
+  transform: translateY(-500%) scaleX(1);
+}
+
+.mobile_menu_btn.open::before {
+  transform: rotate(45deg);
+}
+
+.mobile_menu_btn.open::after {
+  transform: rotate(-45deg);
 }
 
 .open {
