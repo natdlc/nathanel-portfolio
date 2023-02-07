@@ -33,11 +33,11 @@
 }
 
 .mobile_menu:hover::before {
-  transform: translateY(500%) scaleX(1.5);
+  transform: translateY(500%) scaleX(1.23);
 }
 
 .mobile_menu:hover::after {
-  transform: translateY(-500%) scaleX(1.5);
+  transform: translateY(-500%) scaleX(1.23);
 }
 
 .mobile_menu.open::before {
@@ -49,11 +49,11 @@
 }
 
 .mobile_menu.open:hover::before {
-  transform: rotate(45deg) scaleX(1.3);
+  transform: rotate(45deg) scaleX(1.23);
 }
 
 .mobile_menu.open:hover::after {
-  transform: rotate(-45deg) scaleX(1.3);
+  transform: rotate(-45deg) scaleX(1.23);
 }
 
 .ul {
@@ -72,7 +72,6 @@
 
 .ul a {
   font-size: 24px !important;
-  /* padding: 20px; */
 }
 
 @media (max-width: 600px) {
