@@ -5,6 +5,8 @@ import { Montserrat } from "@next/font/google";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
+let firstLoad = true;
+
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps, router }) {
@@ -13,6 +15,7 @@ export default function App({ Component, pageProps, router }) {
 
   useEffect(() => {
     router.events.on("routeChangeStart", () => setIsSmooth(false));
+    firstLoad = false;
   }, []);
 
   return (
@@ -21,7 +24,7 @@ export default function App({ Component, pageProps, router }) {
         {`
           html {
             font-family: ${montserrat.style.fontFamily};
-            scroll-behavior: ${isSmooth ? "smooth" : "auto"};
+            scroll-behavior: ${isSmooth || firstLoad ? "smooth" : "auto"};
           }
         `}
       </style>

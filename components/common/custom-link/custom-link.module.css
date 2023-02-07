@@ -13,3 +13,49 @@
 .custom_link:hover {
   border-bottom: 1px solid black;
 }
+
+@media (max-width: 600px) {
+  .custom_link {
+    border-bottom: none;
+    margin-left: 0;
+  }
+
+  .custom_link:hover {
+    border: none;
+  }
+}
+
+.mobile_submenu_button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: -50px;
+  transform: translateY(-50%);
+  display: flex;
+}
+
+.mobile_submenu_button::before,
+.mobile_submenu_button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background: black;
+}
+
+.mobile_submenu_button::before {
+  transform: translateX(50%) rotate(45deg);
+}
+
+.mobile_submenu_button::after {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.mobile_submenu_button:hover {
+  background: none;
+  border: none;
+}

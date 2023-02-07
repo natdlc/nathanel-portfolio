@@ -120,3 +120,9 @@
 .initial_load_animation line:nth-child(1) {
   transform: translateX(-114%) scaleX(11.21);
 }
+
+@media (max-width: 600px) {
+  .aside {
+    display: none;
+  }
+}

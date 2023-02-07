@@ -51,3 +51,9 @@
 .aside a:hover img {
   margin-left: 5px;
 }
+
+@media (max-width: 600px) {
+  .aside {
+    display: none;
+  }
+}

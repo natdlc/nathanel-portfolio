@@ -5,23 +5,27 @@ import { useState } from "react";
 import Submenu from "../submenu/submenu";
 import styles from "./custom-link.module.css";
 
-export default function CustomLink({ link }) {
-  const [isHovered, setIsHovered] = useState();
-  const { pathname, title, hash } = link;
+export default function CustomLink({ link, isMobile }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const { pathname, title, hash, hasSubmenu } = link;
   const router = useRouter();
 
   const submenu = (
     <AnimatePresence>
-      {isHovered && link.hasSubmenu ? (
-        <Submenu key={link.pathname + link.hash} urlTitle={link.title} />
+      {(isHovered && hasSubmenu) || (!isCollapsed && hasSubmenu) ? (
+        <Submenu isMobile key={pathname + hash} urlTitle={title} />
       ) : null}
     </AnimatePresence>
   );
 
+  console.log(isCollapsed);
+
   return (
     <div
-      onPointerEnter={() => setIsHovered(true)}
-      onPointerLeave={() => setIsHovered(false)}
+      onPointerEnter={() => (isMobile ? null : setIsHovered(true))}
+      onPointerLeave={() => (isMobile ? null : setIsHovered(false))}
       className={styles.custom_link_container}
     >
       {router.pathname === pathname ? (
@@ -29,6 +33,14 @@ export default function CustomLink({ link }) {
           <a className={styles.custom_link} href={hash}>
             {title}
           </a>
+          {isMobile && hasSubmenu ? (
+            <button
+              aria-label="collapse-button"
+              aria-roledescription="button that shows or hides the submenu"
+              onClick={() => setIsCollapsed(!isCollapsed)}
+              className={styles.mobile_submenu_button}
+            ></button>
+          ) : null}
           {submenu}
         </>
       ) : (

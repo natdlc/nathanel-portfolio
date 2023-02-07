@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import { useState } from "react";
+import MainMenu from "../main-menu/main-menu";
 import styles from "./mobile-nav.module.css";
 
 export default function MobileNav() {
@@ -13,7 +13,9 @@ export default function MobileNav() {
           isMobileNavOpen ? styles.open : ""
         }`}
       ></button>
-      {isMobileNavOpen ? <ul className={styles.ul}></ul> : null}
+      <div className={`${styles.div} ${isMobileNavOpen ? styles.open : ""}`}>
+        <MainMenu isMobile />
+      </div>
     </nav>
   );
 }

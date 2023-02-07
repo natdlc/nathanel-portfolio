@@ -3,7 +3,7 @@ import styles from "./submenu.module.css";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
-export default function SubmenuChildren({ items }) {
+export default function SubmenuChildren({ items, isMobile }) {
   const router = useRouter();
   return (
     <motion.div
@@ -11,7 +11,7 @@ export default function SubmenuChildren({ items }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <menu className={`${styles.menu}`}>
+      <menu className={`${styles.menu} ${isMobile ? styles.mobile : ""}`}>
         {items.map(({ pathname, title, hash }) => (
           <li key={pathname + hash}>
             {router.pathname === pathname ? (
