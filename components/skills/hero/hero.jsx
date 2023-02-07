@@ -39,6 +39,16 @@ export default function Hero({ dispatch }) {
           </div>
         )}
       </InView>
+      <InView>
+        {({ inView, ref }) => (
+          <p
+            ref={ref}
+            className={inView ? styles.shownSubtext : styles.hiddenSubtext}
+          >
+            And the tools I use
+          </p>
+        )}
+      </InView>
     </section>
   );
 }

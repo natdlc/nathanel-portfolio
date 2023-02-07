@@ -46,7 +46,7 @@
   animation-duration: 1s;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .header {
     padding: 10px;
   }

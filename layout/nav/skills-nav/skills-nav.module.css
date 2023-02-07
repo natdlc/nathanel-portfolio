@@ -85,3 +85,9 @@
   height: 0;
   border: 1px solid black;
 }
+
+@media (max-width: 1000px) {
+  .div {
+    display: none;
+  }
+}
