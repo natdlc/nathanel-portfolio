@@ -37,6 +37,7 @@ export default function WorkItem({ item }) {
               className={toggler(inView)}
               href={item.url}
               target="_blank"
+              rel="noreferrer"
             >
               <Image
                 src={inProgressImg}

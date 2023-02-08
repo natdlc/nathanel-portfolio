@@ -11,7 +11,7 @@ export default function Contact() {
       <InView>
         {({ inView, ref }) => (
           <h3 ref={ref} className={toggler(inView)}>
-            Let's build your website
+            Let&apos;s build your website
           </h3>
         )}
       </InView>

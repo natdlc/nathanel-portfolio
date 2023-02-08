@@ -11,7 +11,7 @@ export default function Hero() {
               ref={ref}
               className={inView ? styles.showGreet : styles.hideGreet}
             >
-              Hi, I'm
+              Hi, I&apos;m
             </p>
           )}
         </InView>

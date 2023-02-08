@@ -49,7 +49,11 @@ export default function CustomLink({ link, isMobile, style }) {
                 !isCollapsed ? styles.uncollapsed : ""
               }`}
             >
-              <Image src={collapseBtn} width={15} />
+              <Image
+                alt="accordion toggle button"
+                src={collapseBtn}
+                width={15}
+              />
             </button>
           ) : null}
           {submenu}

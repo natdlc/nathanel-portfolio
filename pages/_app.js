@@ -17,7 +17,7 @@ export default function App({ Component, pageProps, router }) {
   useEffect(() => {
     router.events.on("routeChangeStart", () => setIsSmooth(false));
     firstLoad = false;
-  }, []);
+  }, [router.events]);
 
   return (
     <>
