@@ -1,6 +1,4 @@
 import useScrollIntoView from "@/hooks/useScrollIntoView";
-import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
 import { InView } from "react-intersection-observer";
 import styles from "./about-item.module.css";
 

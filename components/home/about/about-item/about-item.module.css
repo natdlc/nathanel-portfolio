@@ -7,6 +7,14 @@
   justify-content: center;
 }
 
+@media (max-width: 1000px) {
+  .article {
+    height: 500px;
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
 .description {
   max-width: 800px;
   text-align: center;
