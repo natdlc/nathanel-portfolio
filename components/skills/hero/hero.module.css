@@ -8,8 +8,25 @@
   padding-bottom: 120px;
 }
 
+@media (max-width: 1000px) {
+  .hero {
+    height: 500px;
+    gap: 20px;
+    justify-content: start;
+    padding-top: 50px;
+  }
+}
+
 .buttons {
   display: flex;
+}
+
+@media (max-width: 1000px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 .buttons button {
@@ -25,15 +42,39 @@
   border-right: none;
 }
 
+@media (max-width: 1000px) {
+  .buttons button {
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid black;
+    letter-spacing: 2px;
+  }
+}
+
 /* h1 animation */
 .hiddenH1 {
-  transition: all 1s;
-  filter: blur(5px);
-  letter-spacing: 80px;
   opacity: 0;
+  transform: translateY(20%);
+  filter: blur(5px);
+  transition: all 1s;
 }
 .shownH1 {
   opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  transition: all 1s;
+}
+
+/* subtext animation */
+.hiddenSubtext {
+  opacity: 0;
+  transform: translateY(20%);
+  filter: blur(5px);
+  transition: all 1s;
+}
+.shownSubtext {
+  opacity: 1;
+  transform: translateY(0);
   filter: blur(0);
   transition: all 1s;
 }
@@ -49,4 +90,10 @@
   filter: blur(0);
   gap: 0;
   transition: all 1.3s;
+}
+
+@media (max-width: 1000px) {
+  .shownButtons {
+    gap: 10px;
+  }
 }

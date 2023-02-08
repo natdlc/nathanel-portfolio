@@ -1,11 +1,15 @@
+import useScrollIntoView from "@/hooks/useScrollIntoView";
+import Image from "next/image";
 import { InView } from "react-intersection-observer";
 import styles from "./work-item.module.css";
+import inProgressImg from "@/public/in-progress.png";
 
 export default function WorkItem({ item }) {
+  const ref = useScrollIntoView(item.id);
   const toggler = (inView) => (inView ? styles.shown : styles.hidden);
 
   return (
-    <article id={item.id} className={styles.article}>
+    <article ref={ref} id={item.id} className={styles.article}>
       <header className={styles.header}>
         <InView>
           {({ inView, ref }) => (
@@ -34,10 +38,10 @@ export default function WorkItem({ item }) {
               href={item.url}
               target="_blank"
             >
-              <img
-                src="https://via.placeholder.com/1920x1080"
-                width={800}
-                alt="placeholder image"
+              <Image
+                src={inProgressImg}
+                alt="nathanel.dev's placeholder image for in progress work project"
+                className={styles.image}
               />
             </a>
           )}

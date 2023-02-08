@@ -7,6 +7,20 @@
   gap: 60px;
 }
 
+@media (max-width: 1000px) {
+  .article {
+    height: 600px;
+    padding: 0 10px;
+    gap: 20px;
+  }
+}
+
+@media (min-height: 600px) {
+  .article {
+    height: 100vh;
+  }
+}
+
 .header {
   text-align: center;
 }
@@ -18,9 +32,33 @@
   gap: 60px;
 }
 
+@media (max-width: 1000px) {
+  .figure {
+    gap: 20px;
+  }
+}
+
+.image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+@media (max-width: 1000px) {
+  .image {
+    max-width: 400px;
+  }
+}
+
 .figure figcaption {
   max-width: 800px;
   text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .figure figcaption {
+    font-size: 14px;
+  }
 }
 
 .hidden {

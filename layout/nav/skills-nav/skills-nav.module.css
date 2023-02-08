@@ -1,6 +1,6 @@
 .div {
   z-index: 99;
-  bottom: 20%;
+  bottom: 40%;
   right: 60px;
   position: fixed;
   display: flex;
@@ -84,4 +84,10 @@
   width: 0;
   height: 0;
   border: 1px solid black;
+}
+
+@media (max-width: 1000px) {
+  .div {
+    display: none;
+  }
 }

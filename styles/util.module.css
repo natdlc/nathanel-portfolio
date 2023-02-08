@@ -15,3 +15,13 @@
 .hidden {
   display: none;
 }
+
+.smooth {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+  .skills_icon_cover {
+    display: none;
+  }
+}

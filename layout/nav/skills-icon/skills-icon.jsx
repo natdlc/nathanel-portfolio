@@ -24,7 +24,6 @@ export default function SkillsIcon() {
         className={styles.link}
         href={onSkillsPage ? "/" : "skills"}
       >
-        {/* SVG TEST BELOW */}
         <svg
           width="100"
           height="100"

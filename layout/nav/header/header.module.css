@@ -1,5 +1,3 @@
-/* animations */
-
 @keyframes nav-menu {
   0% {
     opacity: 0;
@@ -28,8 +26,6 @@
   }
 }
 
-/* animations end */
-
 .header {
   position: fixed;
   z-index: 99;
@@ -50,49 +46,13 @@
   animation-duration: 1s;
 }
 
-.ul {
-  display: flex;
-  gap: 20px;
-}
+@media (max-width: 1000px) {
+  .header {
+    padding: 10px;
+  }
 
-.ul > li {
-  border-bottom: 1px solid white;
-  border-left: 1px solid black;
-  padding-left: 15px;
-  transition: all 0.3s;
-  animation-name: nav-menu;
-}
-
-.ul > li:nth-child(5) {
-  animation-duration: 1.7s;
-}
-.ul > li:nth-child(4) {
-  animation-duration: 1.5s;
-}
-.ul > li:nth-child(3) {
-  animation-duration: 1.4s;
-}
-.ul > li:nth-child(2) {
-  animation-duration: 1.2s;
-}
-.ul > li:nth-child(1) {
-  animation-duration: 1s;
-}
-
-.ul > li:hover {
-  /* background: black; */
-  /* color: black; */
-  border-left: 1px solid white;
-  border-bottom: 1px solid black;
-  letter-spacing: 1px;
-  padding-right: 20px;
-}
-
-.ul > li a {
-  color: inherit;
-}
-
-.link {
-  padding: 10px 20px;
-  display: inline-block;
+  .logo {
+    padding: 10px;
+    font-size: 14px !important;
+  }
 }

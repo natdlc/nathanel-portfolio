@@ -1,4 +1,4 @@
-import { getSkillItems } from "@/lib/skills";
+import { getSkillItems } from "@/lib/content/skills";
 import { useRouter } from "next/router";
 import styles from "./skills-nav.module.css";
 

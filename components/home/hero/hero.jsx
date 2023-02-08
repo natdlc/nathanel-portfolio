@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className={styles.section}>
       <article className={styles.greeting}>
-        <InView threshold={0}>
+        <InView>
           {({ inView, ref }) => (
             <p
               ref={ref}
@@ -15,7 +15,7 @@ export default function Hero() {
             </p>
           )}
         </InView>
-        <InView threshold={0}>
+        <InView>
           {({ inView, ref }) => (
             <h1
               ref={ref}
@@ -26,7 +26,7 @@ export default function Hero() {
           )}
         </InView>
       </article>
-      <InView threshold={0}>
+      <InView>
         {({ inView, ref }) => (
           <p
             ref={ref}
@@ -37,7 +37,7 @@ export default function Hero() {
           </p>
         )}
       </InView>
-      <InView threshold={0} initialInView>
+      <InView>
         {({ inView, ref }) => (
           <a
             ref={ref}

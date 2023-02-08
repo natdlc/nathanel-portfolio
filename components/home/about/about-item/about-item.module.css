@@ -7,6 +7,20 @@
   justify-content: center;
 }
 
+@media (max-width: 1000px) {
+  .article {
+    height: 500px;
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+@media (min-height: 600px) {
+  .article {
+    height: 100vh;
+  }
+}
+
 .description {
   max-width: 800px;
   text-align: center;
