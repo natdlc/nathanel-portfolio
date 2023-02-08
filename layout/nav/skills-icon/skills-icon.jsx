@@ -20,7 +20,9 @@ export default function SkillsIcon() {
   return (
     <aside className={styles.aside}>
       <Link
-        scroll={false}
+        aria-details="link to skills page"
+        aria-label="link"
+        aria-roledescription="link"
         className={styles.link}
         href={onSkillsPage ? "/" : "skills"}
       >

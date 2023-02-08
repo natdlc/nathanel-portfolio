@@ -1,10 +1,9 @@
 import HomePage from "@/components/home/home";
-import PageTransition from "@/components/misc/page-transitions";
 import Head from "next/head";
 
 export default function Home() {
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>Web Developer Portfolio - Nathanel</title>
         <meta
@@ -15,6 +14,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomePage />
-    </PageTransition>
+    </>
   );
 }

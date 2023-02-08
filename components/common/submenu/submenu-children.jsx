@@ -20,19 +20,13 @@ export default function SubmenuChildren({ items, isMobile }) {
       <menu className={`${styles.menu} ${isMobile ? styles.mobile : ""}`}>
         {items.map(({ pathname, title, hash }) => (
           <li key={pathname + hash}>
-            {router.pathname === pathname ? (
-              <a onClick={onClickHandler} href={hash}>
-                {title}
-              </a>
-            ) : (
-              <Link
-                onClick={onClickHandler}
-                scroll={false}
-                href={{ pathname, hash }}
-              >
-                {title}
-              </Link>
-            )}
+            <Link
+              onClick={onClickHandler}
+              scroll={router.pathname === pathname}
+              href={{ pathname, hash }}
+            >
+              {title}
+            </Link>
           </li>
         ))}
       </menu>

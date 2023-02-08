@@ -16,6 +16,9 @@ export default function SkillsNav({ visibleSection }) {
           className={`
           ${router.pathname.includes("skills") ? styles.shown : styles.hidden}`}
           href={skill.title === "hero" ? "#" : `#${skill.title}`}
+          aria-label={skill.title}
+          aria-details="link that navigates to corresponding skill"
+          aria-roledescription="link"
         >
           <span className={styles.icon_container}>
             <span

@@ -14,7 +14,6 @@ export default function CustomLink({ link, isMobile, style }) {
   const { setIsMobileNavOpen } = useContext(MobileNavContext);
 
   const { pathname, title, hash, hasSubmenu } = link;
-  const router = useRouter();
 
   const submenu = (
     <AnimatePresence>
@@ -30,60 +29,28 @@ export default function CustomLink({ link, isMobile, style }) {
       onPointerLeave={() => (isMobile ? null : setIsHovered(false))}
       className={styles.custom_link_container}
     >
-      {router.pathname === pathname ? (
-        <>
-          <a
-            style={{ ...style }}
-            onClick={() => setIsMobileNavOpen(false)}
-            className={styles.custom_link}
-            href={hash}
-          >
-            {title}
-          </a>
-          {isMobile && hasSubmenu ? (
-            <button
-              aria-label="collapse-button"
-              aria-roledescription="button that shows or hides the submenu"
-              onClick={() => setIsCollapsed(!isCollapsed)}
-              className={`${styles.mobile_submenu_button} ${
-                !isCollapsed ? styles.uncollapsed : ""
-              }`}
-            >
-              <Image
-                alt="accordion toggle button"
-                src={collapseBtn}
-                width={15}
-              />
-            </button>
-          ) : null}
-          {submenu}
-        </>
-      ) : (
-        <>
-          <Link
-            style={{ ...style }}
-            onClick={() => setIsMobileNavOpen(false)}
-            className={styles.custom_link}
-            scroll={false}
-            href={{ pathname, hash }}
-          >
-            {title}
-          </Link>
-          {isMobile && hasSubmenu ? (
-            <button
-              aria-label="collapse-button"
-              aria-roledescription="button that shows or hides the submenu"
-              onClick={() => setIsCollapsed(!isCollapsed)}
-              className={`${styles.mobile_submenu_button} ${
-                !isCollapsed ? styles.uncollapsed : ""
-              }`}
-            >
-              <Image src={collapseBtn} width={15} />
-            </button>
-          ) : null}
-          {submenu}
-        </>
-      )}
+      <Link
+        style={{ ...style }}
+        onClick={() => setIsMobileNavOpen(false)}
+        className={styles.custom_link}
+        // scroll={!hash}
+        href={{ pathname, hash }}
+      >
+        {title}
+      </Link>
+      {isMobile && hasSubmenu ? (
+        <button
+          aria-label="collapse-button"
+          aria-roledescription="button that shows or hides the submenu"
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className={`${styles.mobile_submenu_button} ${
+            !isCollapsed ? styles.uncollapsed : ""
+          }`}
+        >
+          <Image src={collapseBtn} width={15} />
+        </button>
+      ) : null}
+      {submenu}
     </div>
   );
 }

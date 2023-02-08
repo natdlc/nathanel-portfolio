@@ -7,19 +7,15 @@ import { Montserrat } from "@next/font/google";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-let firstLoad = true;
-
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps, router }) {
-  const [isSmooth, setIsSmooth] = useState();
   const skillsNav = useSkillsNav();
 
   useTransitionFix();
 
   useEffect(() => {
-    router.events.on("routeChangeStart", () => setIsSmooth(false));
-    firstLoad = false;
+    window.addEventListener("load", () => console.log("window has loaded"));
   }, [router.events]);
 
   return (
@@ -28,26 +24,18 @@ export default function App({ Component, pageProps, router }) {
         {`
           html {
             font-family: ${montserrat.style.fontFamily};
-            scroll-behavior: ${isSmooth || firstLoad ? "smooth" : "auto"};
           }
         `}
       </style>
       <MobileNavProvider>
         <Layout skillsNav={skillsNav}>
-          <AnimatePresence
-            mode="wait"
-            initial={false}
-            onExitComplete={() => {
-              window.scrollTo(0, 0);
-              setTimeout(() => setIsSmooth(true), 200);
-            }}
-          >
-            <Component
-              key={router.asPath}
-              dispatch={skillsNav.dispatch}
-              {...pageProps}
-            />
-          </AnimatePresence>
+          {/* <AnimatePresence mode="wait" initial={false}> */}
+          <Component
+            key={router.asPath}
+            dispatch={skillsNav.dispatch}
+            {...pageProps}
+          />
+          {/* </AnimatePresence> */}
         </Layout>
       </MobileNavProvider>
     </>
