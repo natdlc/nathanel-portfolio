@@ -5,6 +5,12 @@
   flex-wrap: nowrap;
 }
 
+@media (max-width: 1000px) {
+  .list_item {
+    flex-direction: column;
+  }
+}
+
 .list_key {
   text-transform: uppercase;
 }
@@ -14,6 +20,16 @@
   height: 1px;
   background: black;
   margin: 0 20px;
+}
+
+@media (max-width: 1000px) {
+  .list_line {
+    display: none;
+  }
+
+  .list_value {
+    font-weight: 800;
+  }
 }
 
 /* list_key animation */
