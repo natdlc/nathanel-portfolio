@@ -9,8 +9,6 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 export default function App({ Component, pageProps, router }) {
   const skillsNav = useSkillsNav();
 
-  console.log(Component);
-
   return (
     <>
       <style jsx global>
