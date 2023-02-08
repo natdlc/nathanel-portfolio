@@ -1,4 +1,3 @@
-import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useState } from "react";
@@ -15,13 +14,10 @@ export default function CustomLink({ link, isMobile, style }) {
 
   const { pathname, title, hash, hasSubmenu } = link;
 
-  const submenu = (
-    <AnimatePresence>
-      {(isHovered && hasSubmenu) || (!isCollapsed && hasSubmenu) ? (
-        <Submenu isMobile={isMobile} key={pathname + hash} urlTitle={title} />
-      ) : null}
-    </AnimatePresence>
-  );
+  const submenu =
+    (isHovered && hasSubmenu) || (!isCollapsed && hasSubmenu) ? (
+      <Submenu isMobile={isMobile} key={pathname + hash} urlTitle={title} />
+    ) : null;
 
   return (
     <div
