@@ -31,6 +31,7 @@ export default function MobileNav() {
             width: "100%",
           }}
         >
+          <Socials />
           <CustomLink
             isMobile
             link={{
@@ -40,7 +41,6 @@ export default function MobileNav() {
               hasSubmenu: false,
             }}
           />
-          <Socials />
         </div>
       </div>
     </nav>
