@@ -5,14 +5,14 @@ export default function Contact() {
   const toggler = (inView) => (inView ? styles.shown : styles.hidden);
   return (
     <section id="contact" className={styles.section}>
-      <InView rootMargin={"-200px 0px"}>
+      <InView>
         {({ inView, ref }) => (
           <h3 ref={ref} className={toggler(inView)}>
             Let's build your website
           </h3>
         )}
       </InView>
-      <InView rootMargin={"-200px 0px"}>
+      <InView>
         {({ inView, ref }) => (
           <a
             ref={ref}
