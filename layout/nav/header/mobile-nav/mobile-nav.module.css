@@ -1,3 +1,13 @@
+.nav {
+  display: flex;
+}
+
+@media (min-width: 1000px) {
+  .nav {
+    display: none;
+  }
+}
+
 .nav_content_container {
   position: fixed;
   overflow-y: auto;
@@ -61,10 +71,4 @@
 
 .open {
   transform: translateY(0);
-}
-
-@media (min-width: 1000px) {
-  .nav {
-    display: none;
-  }
 }
