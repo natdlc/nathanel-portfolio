@@ -13,7 +13,6 @@ export default function Header() {
         alt="nathanel corpuz logo"
         width={60}
       />
-      {/* <p className={styles.logo}>nathanel.dev</p> */}
       <MobileNav />
       <MainMenu />
     </header>
